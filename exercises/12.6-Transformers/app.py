@@ -7,4 +7,18 @@ incoming_ajax_data = [
 ]
 
 # Your code here
+def full_names(usuario):
+
+    full_name = usuario["name"] + " " + usuario["last_name"]
+
+    return full_name
+
+def data_transformer(incoming_ajax_data):
+
+    full_name = list(map(full_names,incoming_ajax_data))
+
+    return full_name
+
+print(data_transformer(incoming_ajax_data))
+
 
